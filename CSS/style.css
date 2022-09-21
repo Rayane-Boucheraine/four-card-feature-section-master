@@ -1,0 +1,97 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--VeryLightGray);
+}
+main {
+    padding: 30px 150px;
+}
+main > h1 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 30px;
+    color: var(--VeryDarkBlue);
+}
+main > h1 span {
+    font-weight: 200;
+}
+main > p {
+    padding: 0 200px;
+    text-align: center;
+    margin-bottom: 45px;
+    color: var(--GrayishBlue);
+}
+.classes {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, 25%);
+    gap: 30px;
+    margin-bottom: 120px;
+}
+.box {
+    position: relative;
+    box-shadow: 0 0 12px 0 rgba(128, 128, 128, 0.521);
+    border-radius: 5px;
+    padding: 30px;
+    overflow: hidden;
+}
+.box h3 {
+    margin-bottom: 8px;
+}
+.box p {
+    color: var(--GrayishBlue);
+    margin-bottom: 40px;
+    font-size: 12px;
+}
+.box img {
+    float: right;
+}
+.box:nth-of-type(1) {
+    grid-area: 1/2/3/3;
+    border-top: 4px solid var(--Red);
+}
+.box:nth-of-type(2) {
+    grid-area: 2/3/4/4;
+    border-top: 4px solid var(--Blue);
+}
+.box:nth-of-type(3) {
+    grid-area: 2/1/4/2;
+    border-top: 4px solid var(--Cyan);
+}
+.box:nth-of-type(4) {
+    grid-area: 3/2/5/3;
+    border-top: 4px solid var(--Orange);
+}
+@media (max-width: 767px) {
+    main {
+        padding: 30px;
+    }
+    .classes {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    main > h1 {
+        font-size: 25px;
+    }
+    main > p {
+        padding: 0;
+        font-size: 15px;
+    }
+    .box p {
+        margin-bottom: 30px;
+    }
+}
